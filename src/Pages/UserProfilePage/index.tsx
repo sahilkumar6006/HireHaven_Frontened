@@ -7,6 +7,7 @@ import {
   FileText, 
   Clipboard 
 } from 'lucide-react';
+import AddWorkExperienceButton from '../../components/AddWorkExperience/AddWorkExperienceButton';
 
 const ProfilePage = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -136,6 +137,7 @@ const ProfilePage = () => {
                   <p className="mt-2 text-gray-600">{job.description}</p>
                 </div>
               ))}
+              <AddWorkExperienceButton title="Add Experience" />
             </div>
           )}
 
