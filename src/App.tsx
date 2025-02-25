@@ -6,6 +6,7 @@ import './index.css';
 import AboutUs from './Pages/AboutUs';
 
 function App() {
+ 
   return (
     <Router>
     <Routes>
@@ -18,5 +19,6 @@ function App() {
   </Router>
   )
 }
+
 
 export default App
