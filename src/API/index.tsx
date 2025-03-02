@@ -4,11 +4,20 @@ import api from "./apiInterceptor";
 type HttpMethod = "get" | "post" | "put" | "delete";
 const execute = async (method : HttpMethod, url : string, data = {}, params = {}) => {
     try {
+
+      const isFormData = data instanceof FormData;
+
+      // Set headers 
+      const headers = isFormData
+        ? {}                                
+        : { "Content-Type": "application/json" };
+
       const response = await api({
         method,
         url,
         data,
         params,
+        headers
       });
       return response.data;
     } catch (error) {
