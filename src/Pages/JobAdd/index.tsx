@@ -8,7 +8,7 @@ const PostJob = () => {
     };
 
     return (
-        <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md mt-20">
             <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
             <p className="text-gray-600 mb-6">Find the best talent for your company</p>
 
@@ -50,7 +50,7 @@ const PostJob = () => {
 
                 <textarea {...register("jobDescription")} className="w-full p-2 border rounded" placeholder="Add your description..." />
 
-                <button type="submit" className="bg-purple-600 text-white p-2 rounded w-full">Post Job</button>
+                <button type="submit" className="bg-blue-600 text-white p-2 rounded w-full">Post Job</button>
             </form>
         </div>
     );
