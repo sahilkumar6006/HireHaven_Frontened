@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
-    const navigation = useNavigate();
+  const navigation = useNavigate();
   return (
     <nav className="bg-blue-600 text-white">
       <div className="max-w-6xl mx-auto px-4">
@@ -32,17 +32,21 @@ const Navbar = () => {
             </a>
 
 
-            <Link to={"/AboutUs"}  className="hover:text-blue-200 transition-colors">
+            <Link to={"/AboutUs"} className="hover:text-blue-200 transition-colors">
               About
+            </Link>
+
+            <Link to={"/PostJob"} className="hover:text-blue-200 transition-colors">
+              Job
             </Link>
           </div>
 
           {/* Buttons */}
           <div className="hidden md:flex space-x-4">
-            <button className="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-blue-50 transition-colors" onClick={() => navigation("/AuthPage", {logged: true})}>
+            <button className="bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-blue-50 transition-colors" onClick={() => navigation("/AuthPage", { logged: true })}>
               Log In
             </button>
-            <button className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors" onClick={() => navigation("/AuthPage", {logged: false})}>
+            <button className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition-colors" onClick={() => navigation("/AuthPage", { logged: false })}>
               Sign Up
             </button>
           </div>
