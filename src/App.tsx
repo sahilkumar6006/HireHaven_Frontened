@@ -9,6 +9,7 @@ import AboutUs from './Pages/AboutUs';
 import WorkExperience from './Pages/ResumeBuilderPage';
 import AddWorkExperience from './components/AddWorkExperience';
 import PostJob from './Pages/JobAdd/index'
+import JobDetail from './Pages/JobDetail/JobDetail';
 
 
 
@@ -27,6 +28,8 @@ function App() {
         <Route path="/UserProfilePage" element={<UserProfilePage />} />
         <Route path="/UserProfilePage/AddWorkExperience" element={<AddWorkExperience />} />
         <Route path='/PostJob' element={<PostJob />} />
+        <Route path="/JobDetail" element={<JobDetail />} />
+        
 
 
       </Routes>
