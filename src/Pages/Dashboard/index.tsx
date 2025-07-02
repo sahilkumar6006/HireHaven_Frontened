@@ -9,6 +9,7 @@ import {
   Clock 
 } from 'lucide-react';
 import Navbar from '../../components/navbar';
+import Footer from '../../components/footer';
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -54,7 +55,7 @@ const Dashboard = () => {
       salary: '$110k - $140k'
     },
     {
-      title: 'Data Scientist',
+      title: 'Data Scientist',  
       company: 'DataCraft Technologies',
       location: 'Remote',
       salary: '$100k - $130k'
@@ -190,7 +191,8 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+      <Footer />
     </>
   );
 };

@@ -7,6 +7,7 @@ import {
   CheckCircle 
 } from 'lucide-react';
 import Navbar from '../../components/navbar';
+import Footer from '../../components/footer';
 
 const JobListings = () => {
   const [filters, setFilters] = useState({
@@ -124,9 +125,12 @@ const JobListings = () => {
                   )}
                 </div>
                 <div className="space-x-2">
-                  <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+                    <a
+                    href="JobDetail"
+                    className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 inline-block text-center"
+                    >
                     View Details
-                  </button>
+                    </a>
                   {job.isEasyApply && (
                     <button className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">
                       Quick Apply
@@ -150,7 +154,8 @@ const JobListings = () => {
           ))}
         </div>
       </div>
-    </div>
+      </div>
+      <Footer />
     </>
   );
 };

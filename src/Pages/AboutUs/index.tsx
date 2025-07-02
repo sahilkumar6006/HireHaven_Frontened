@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../../components/navbar";
+import Footer from "../../components/footer";
 
 const AboutUs = () => {
   return (
@@ -70,9 +71,7 @@ const AboutUs = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-blue-700 text-center py-4">
-        <p>&copy; 2024 HireHaven. All rights reserved.</p>
-      </footer>
+      <Footer/>
     </div>
     </>
   );

@@ -1,5 +1,8 @@
+import 'react-toastify/dist/ReactToastify.css';
 import React, { useState } from 'react';
 import { LockIcon, MailIcon, UserIcon } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const AuthPage = ({logged}: any) => {
   console.log("in the isLogin", logged)
@@ -19,9 +22,67 @@ const AuthPage = ({logged}: any) => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Add your login/signup logic here
+
+    const { email, password, name, confirmPassword } = formData;
+    if(isLogin){
+      if(!email || !password){
+        alert("Please enter email and password");
+        return;
+      }
+
+      if(password.length < 7){
+        alert("Password must be at least 7 characters long");
+        return;
+      }
+
+      if(password !== confirmPassword){
+        alert("Passwords do not match");
+        return;
+      }
+    } else {
+      if(!name || !email || !password || !confirmPassword){
+        alert("Please enter all fields");
+        return;
+      }
+
+      if(password !== confirmPassword){
+        alert("Passwords do not match");
+        return;
+      }
+    }
+
+    const userData = {
+      name: name,
+      email: email,
+      password: password
+    }
+
+    if(isLogin){
+      console.log("login")
+    } else {
+      console.log("signup")
+    }
+
+    console.log(userData)
+    console.log(isLogin)
+    console.log(formData)
+    console.log(name)
+    console.log(email)
+    console.log(password)
+    console.log(confirmPassword)
+    console.log(formData)
+    console.log(logged)
+    console.log(isLogin)
+    console.log(logged)
+    
+
+    const navigate = useNavigate();
+    toast.success(isLogin ? "Login successful!" : "Signup successful!");
+    navigate("/dashboard");
+  
     console.log(isLogin ? 'Login' : 'Signup', formData);
   };
 
